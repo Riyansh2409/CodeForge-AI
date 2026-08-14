@@ -1,3 +1,15 @@
-from codeforge_ai.config.settings import GEMINI_API_KEY
+from codeforge_ai.llm.gemini import get_gemini_model
 
-print("Gemini key loaded:", bool(GEMINI_API_KEY))
+
+def main():
+    model = get_gemini_model()
+
+    response = model.invoke(
+        "Explain what an AI agent is in simple terms."
+    )
+
+    print(response.content)
+
+
+if __name__ == "__main__":
+    main()
