@@ -5,7 +5,7 @@ def main():
     model = get_llm()
 
     response = model.invoke(
-        "Explain Linear Regression is in simple terms."
+        "Explain Quantom Physics is in simple terms."
     )
 
     print(response.content)
