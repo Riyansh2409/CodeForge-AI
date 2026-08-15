@@ -8,8 +8,9 @@ from codeforge_ai.config.settings import (
 
 def get_openrouter_model():
     return ChatOpenAI(
-        model=OPENROUTER_MODEL,
+        model="openrouter/free",
         api_key=OPENROUTER_API_KEY,
         base_url="https://openrouter.ai/api/v1",
         temperature=0.2,
+        max_retries=2,
     )

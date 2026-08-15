@@ -20,13 +20,14 @@ def main():
                         "architecture, technologies, and potential issues."
                     )
                 )
-            ]
+            ],
+            "analysis": None,
         }
     )
 
-    print("\nFINAL RESULT:\n")
+    print("\nFINAL ANALYSIS:\n")
 
-    print(result["messages"][-1].content)
+    print(result["analysis"].model_dump_json(indent=2))
 
 
 if __name__ == "__main__":
